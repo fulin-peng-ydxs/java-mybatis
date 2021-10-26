@@ -1,7 +1,7 @@
-# JavaMybatisUse
+# JavaMybatis
 
 #### 介绍
-Mybatis框架的实际应用层实战理论！
+Mybatis框架实战理论！
 
 #### 软件架构
 软件架构说明
