@@ -10,5 +10,18 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>MyBatis-Use</module>
+        <module>Mybatis-Source</module>
     </modules>
+
+    <properties>
+        <mybatis.version>3.5.8</mybatis.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+    </dependencies>
 </project>
