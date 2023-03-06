@@ -35,7 +35,7 @@ public class MybatisDemo {
     }
 
     private static void configOperate(SqlSession sqlSession){
-        //直接访问
+        //直接访问：mybatis中，如果id属性在环境中是唯一的，则可以用简便方式直接访问，否则需要前缀拼凑命名空间访问
 //        List<Object> objects = sqlSession.selectList("findUserMapper");
 //        System.out.println(objects);
         //映射器访问
@@ -45,7 +45,7 @@ public class MybatisDemo {
     }
 
     private static void codeOperate(SqlSession sqlSession){
-        //直接访问
+        //直接访问：mybatis中，如果id属性在环境中是唯一的，则可以用简便方式直接访问，否则需要前缀拼凑命名空间访问
 //        List<Object> objects = sqlSession.selectList("findUser");
 //        System.out.println(objects);
         //映射器访问
