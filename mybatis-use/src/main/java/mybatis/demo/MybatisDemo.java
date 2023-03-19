@@ -54,13 +54,13 @@ public class MybatisDemo {
         System.out.println(mapperUser);
     }
 
-    private static SqlSessionFactory config(){
+    public static SqlSessionFactory config(){
         InputStream resource = MybatisDemo.class.getResourceAsStream("/conf/mybatis-demo-conf.xml");
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
         return sqlSessionFactoryBuilder.build(resource);
     }
 
-    private static SqlSessionFactory code(){
+    public static SqlSessionFactory code(){
         //事务工厂
         JdbcTransactionFactory jdbcTransactionFactory = new JdbcTransactionFactory();
         //数据源
