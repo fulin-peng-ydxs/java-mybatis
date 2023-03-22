@@ -7,6 +7,7 @@
     <!--插件配置-->
     <plugins>
         <plugin interceptor="com.github.pagehelper.PageInterceptor"/>
+        <plugin interceptor="mybatis.plugs.page.OffsetLimitInterceptor"/>
     </plugins>
 
 

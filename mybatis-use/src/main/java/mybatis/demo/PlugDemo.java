@@ -4,6 +4,8 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import mybatis.dao.UserDao;
+import org.apache.ibatis.session.RowBounds;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +18,14 @@ public class PlugDemo {
         UserDao userDao = sqlSessionFactory.openSession().getMapper(UserDao.class);
         page(userDao);
         pageInfo(userDao);
+        customerPage(sqlSessionFactory.openSession());
     }
+
+    private static void customerPage(SqlSession sqlSession){
+        List<Object> findUser = sqlSession.selectList("findUser", null, new RowBounds(0, 1));
+        System.out.println(findUser);
+    }
+
 
     private static void page(UserDao userDao){
         //开启分页，会拦截下面第一个执行的查询操作
