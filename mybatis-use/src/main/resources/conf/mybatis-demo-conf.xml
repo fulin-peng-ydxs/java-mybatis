@@ -3,6 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <!--插件配置-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"/>
+        <plugin interceptor="mybatis.plugs.page.OffsetLimitInterceptor"/>
+    </plugins>
+
+
     <!--指定源-->
     <environments default="demo">
         <environment id="demo">
